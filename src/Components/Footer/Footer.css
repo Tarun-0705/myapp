@@ -1,0 +1,74 @@
+
+
+.footer {
+    background: linear-gradient(135deg, #1a1a1a, #000000); /* Black gradient for aesthetics */
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+    min-height: 10vh;
+    font-family: 'Arial', sans-serif;
+    border-top: 2px solid #333; /* Thin border for separation */
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo {
+    flex: 0;
+  }
+  
+  .footer-brand {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+  
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-link {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: #6704b3; /* Adds a subtle hover effect */
+  }
+  
+  .footer-bottom {
+    margin-top: 10px;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      align-items: center;
+    }
+  
+    .footer-links {
+      flex-direction: column; /* Stack links vertically */
+      gap: 10px;
+    }
+  
+    .footer-logo {
+      margin-bottom: 20px; /* Add spacing between logo and links */
+    }
+  }
+  

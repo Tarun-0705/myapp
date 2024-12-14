@@ -1,0 +1,85 @@
+/* General styles for the Terms of Service page */
+.terms-of-service-container {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a0dad, #000000); /* Black-purple gradient */
+    padding: 0 20px;
+    color: white;
+}
+
+.terms-of-service-header {
+    text-align: center;
+    background: linear-gradient(135deg, #6a0dad, #ff8c00); /* Black-purple gradient */
+    padding: 40px 20px;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.terms-of-service-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+.terms-of-service-header p {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.terms-of-service-section {
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.terms-of-service-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff8c00; /* Accent color */
+}
+
+.terms-of-service-section ul {
+    list-style: disc;
+    margin-left: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.terms-of-service-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #ddd; /* Lighter color for better readability */
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .terms-of-service-header h1 {
+        font-size: 2.5em;
+    }
+
+    .terms-of-service-header p {
+        font-size: 1.1em;
+    }
+
+    .terms-of-service-section h2 {
+        font-size: 2.2em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .terms-of-service-header h1 {
+        font-size: 2.2em;
+    }
+
+    .terms-of-service-header p {
+        font-size: 1em;
+    }
+
+    .terms-of-service-section h2 {
+        font-size: 2em;
+    }
+
+    .terms-of-service-section p {
+        font-size: 1em;
+    }
+}

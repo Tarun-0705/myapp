@@ -1,0 +1,235 @@
+/* General styles for the About page */
+.about-container {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6a0dad, #000000); /* Black-purple gradient */
+    color: #fff; /* White text for contrast */
+}
+
+.about-header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #6a0dad, #ff8c00); /* Black-purple gradient */
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.about-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+}
+
+.about-header p {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.about-intro {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.intro-text {
+    width: 50%;
+}
+
+.intro-text h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.intro-text p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.intro-image img {
+    max-width: 70%;
+    height: auto;
+    margin-left: 175px;
+    border-radius: 100px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.intro-image img:hover {
+    transform: scale(1.1); /* Cool zoom effect on hover */
+}
+
+.how-it-works {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff8c00;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.step {
+    width: 30%;
+    text-align: center;
+}
+
+.step h3 {
+    font-size: 1.8em;
+    color: #ff8c00;
+}
+
+.step p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.step img {
+    width: 80%;
+    border-radius: 10px;
+    margin-top: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.step img:hover {
+    transform: scale(1.05); /* Zoom effect */
+}
+
+.team {
+    background: linear-gradient(135deg, #6a0dad, #000000); /* Black-purple gradient */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.team h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 30%;
+    text-align: center;
+}
+
+.team-member img {
+    width: 80%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member img:hover {
+    transform: scale(1.1); /* Hover effect */
+}
+
+.team-member h3 {
+    font-size: 1.5em;
+}
+
+.team-member p {
+    font-size: 1.2em;
+}
+
+.contact {
+    text-align: center;
+    padding: 30px 20px;
+    background: #000000;
+    color: white;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+}
+
+.contact-button {
+    background-color: #ff8c00;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #ff6600;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    .about-intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-text,
+    .intro-image {
+        width: 100%;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+
+    .step {
+        width: 100%;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-header h1 {
+        font-size: 2.5em;
+    }
+
+    .about-header p {
+        font-size: 1.2em;
+    }
+
+    .how-it-works h2,
+    .team h2,
+    .contact h2 {
+        font-size: 2em;
+    }
+
+    .contact-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}

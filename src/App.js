@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Import Routes and Route
+import About from './Components/About/About';  
+import Header from './Components/Header/Header';  
+import Footer from './Components/Footer/Footer';  
+import {LoginSignup} from './Components/LoginSignup/LoginSignup';  // Ensure it's the default export
+import Privacy from './Components/Privacy/Privacy';  // Import the Privacy component
+import Terms from './Components/Terms/Terms';  // Import the Terms component
+import Contact from './Components/Contact/Contact';  // Import the Contact component
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />  {/* Header will be shown on all pages */}
+      <Routes>
+        <Route path="/" element={<LoginSignup />} /> {/* Default route for login/signup */}
+        <Route path="/about" element={<About />} /> {/* About page route */}
+        <Route path="/privacy" element={<Privacy />} /> {/* Privacy page route */}
+        <Route path="/terms" element={<Terms />} /> {/* Terms page route */}
+        <Route path="/contact" element={<Contact />} /> {/* Contact page route */}
+      </Routes>
+      <Footer />  {/* Footer will be shown on all pages */}
+    </Router>
   );
-}
+};
 
 export default App;
