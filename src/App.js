@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Im
 import About from './Components/About/About';  
 import Header from './Components/Header/Header';  
 import Footer from './Components/Footer/Footer';  
-import {LoginSignup} from './Components/LoginSignup/LoginSignup';  // Ensure it's the default export
+import {LoginSignup} from './Pages/LoginSignup/LoginSignup'
 import Privacy from './Components/Privacy/Privacy';  // Import the Privacy component
 import Terms from './Components/Terms/Terms';  // Import the Terms component
 import Contact from './Components/Contact/Contact';  // Import the Contact component
