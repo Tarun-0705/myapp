@@ -1,74 +1,144 @@
-
-
+/* src/components/Footer/Footer.css */
 .footer {
-    background: linear-gradient(135deg, #1a1a1a, #000000); /* Black gradient for aesthetics */
-    color: #fff;
-    padding: 20px 10px;
-    text-align: center;
-    min-height: 10vh;
-    font-family: 'Arial', sans-serif;
-    border-top: 2px solid #333; /* Thin border for separation */
-  }
-  
+  background-color: #000000;  /* Black background for the footer */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.footer-testimonials {
+  margin-bottom: 30px;  /* Adds space between testimonials and the footer links */
+}
+
+.footer-links-container {
+  background-color: #222;  /* Dark background for the links container */
+  padding: 30px 20px;
+  border-radius: 10px;
+  margin: 40px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);  /* Subtle shadow for links container */
+}
+
+/* Flexbox for organizing footer links */
+.footer-links-content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer-link {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;  /* Initial border to make the glow effect visible */
+  padding: 5px 10px;
+}
+
+/* Glowing effect on hover for footer links */
+.footer-link:hover {
+  color: #fff;  /* Keep text color white on hover */
+  text-decoration: none;
+  transform: translateY(5px);  /* Move the link down slightly */
+  text-shadow: 0 0 10px rgba(128, 0, 128, 0.8), 0 0 20px rgba(128, 0, 128, 0.8), 0 0 30px rgba(128, 0, 128, 0.8);  /* Purple glowing text shadow */
+  box-shadow: 0 0 10px 5px rgba(128, 0, 128, 0.8);  /* Purple border glow */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.footer-logo {
+  flex: 1;
+}
+
+.footer-brand {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.testimonial-card {
+  background-color: #fdfafa;  /* Light background for testimonial cards */
+  color: #000;  /* Black text for readability */
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 350px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(75, 0, 130, 0.5),  /* Purple glow */
+                0 0 40px rgba(0, 0, 0, 0.5);   /* Black glow */
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  border: 2px solid transparent;  /* Initial border to make the glow effect visible */
+}
+
+/* Glowing effect on hover for testimonial cards */
+.testimonial-card:hover {
+  transform: translateY(-10px);  /* Slight lift effect */
+  box-shadow: 0 0 30px rgba(75, 0, 130, 0.7),  /* Brighter purple glow on hover */
+                0 0 60px rgba(0, 0, 0, 0.7);   /* Enhanced black glow on hover */
+  border: 2px solid #800080;  /* Purple border glow */
+}
+
+.testimonial-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;  /* Keep the name text black */
+}
+
+.testimonial-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;  /* Set testimonial content text color to black */
+}
+
+.testimonial-card .testimonial-icon {
+  font-size: 25px;
+  color: #39ff14;  /* Neon green for any icons (e.g., stars or quotes) */
+  margin-right: 10px;
+}
+
+.testimonial-card .testimonial-icon:hover {
+  color: #00ff00;  /* Bright green glow on hover for icons */
+}
+
+@media (max-width: 768px) {
   .footer-content {
-    display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 50px;
-    margin-bottom: 10px;
   }
-  
-  .footer-logo {
-    flex: 0;
+
+  .footer-links-content {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
   }
-  
-  .footer-brand {
-    font-size: 32px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #fff;
-  }
-  
-  .footer-links {
+
+  .testimonial-cards {
     display: flex;
+    flex-direction: column;
     gap: 20px;
+    align-items: center;
   }
-  
-  .footer-link {
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-link:hover {
-    color: #6704b3; /* Adds a subtle hover effect */
-  }
-  
-  .footer-bottom {
-    margin-top: 10px;
-  }
-  
-  .footer-text {
-    font-size: 14px;
-    color: #aaa;
-  }
-  
-  @media (max-width: 768px) {
-    .footer-content {
-      flex-direction: column; /* Stack items vertically on smaller screens */
-      align-items: center;
-    }
-  
-    .footer-links {
-      flex-direction: column; /* Stack links vertically */
-      gap: 10px;
-    }
-  
-    .footer-logo {
-      margin-bottom: 20px; /* Add spacing between logo and links */
-    }
-  }
-  
+}
